@@ -12,15 +12,14 @@ def find_all_users_name(data: dict)->list:
     list1 = []
     list2 = []
     list_1 = []
-    list_2 = []
     messages = data["messages"]
-    for i in messages:
-        list1.append(i.get("actor",0))
-    for k in list1:
-        if k != 0:
-            if k not in list_1:
+    # for i in messages:
+    #     list1.append(i.get("actor",0))
+    # for k in list1:
+    #     if k != 0:
+    #         if k not in list_1:
                 
-                list_1.append(k)
+    #             list_1.append(k)
 
     for j in messages:
         list2.append(j.get("from",0))
