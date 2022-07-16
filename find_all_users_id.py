@@ -17,13 +17,15 @@ def find_all_users_id(data: dict)->list:
         list1.append(i.get("actor_id",0))
     for k in list1:
          if k != 0:
-             list_1.append(k)
+            if k not in list_1:
+                list_1.append(k)
 
     for j in messages:
         list2.append(j.get("from_id",0))
     for s in list2:
-         if s != 0:
-             list_1.append(s)
+        if s != 0:
+            if s not in list_1:
+                list_1.append(s)
     return list_1
 
 a = read_data("data/result.json")
