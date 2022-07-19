@@ -20,13 +20,8 @@ def find_all_users_id(data: dict)->list:
             if k not in list_1:
                 list_1.append(k)
 
-    for j in messages:
-        list2.append(j.get("actor_id",0))
-    for s in list2:
-        if s != 0:
-            if s not in list_1:
-                list_1.append(s)
-    return list_1[:-3]
+    
+    return list_1
 
 a = read_data("data/result.json")
-find_all_users_id(a)
+print(find_all_users_id(a))
